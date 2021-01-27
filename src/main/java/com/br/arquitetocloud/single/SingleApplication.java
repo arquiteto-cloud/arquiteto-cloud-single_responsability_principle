@@ -12,10 +12,13 @@ public class SingleApplication {
 		System.out.println("Início fluxo de Compra");
 		
 		Pedido pedido = new Pedido(); 		
-		pedido.gerarPedido();
-		pedido.validarPagamento();
-		pedido.separarEstoque();
-		pedido.emitirNotaFiscal();
+		pedido.gerarNumeroPedido();
+		Pagamento pagamento = new Pagamento();
+		pagamento.validarPagamento();
+		Estoque estoque = new Estoque();
+		estoque.separarEstoque();
+		NotaFiscal notaFiscal = new NotaFiscal();
+		notaFiscal.emitirNotaFiscal();
 				
 		System.out.println("Início fluxo de Compra");
 	}
